@@ -127,15 +127,18 @@ export default function LandingPage() {
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#download"
-                className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-2xl font-semibold shadow hover:opacity-95"
-                style={{
-                  backgroundColor: "var(--kw-primary)",
-                  border: "1px solid rgba(0,0,0,0.04)",
+                href="/downloads/KiloWatch.apk"
+                download="KiloWatch.apk"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleDownload("/downloads/KiloWatch.apk", "KiloWatch.apk");
                 }}
+                className="inline-flex items-center gap-2 text-black px-5 py-3 rounded-2xl font-semibold shadow"
+                style={{ backgroundColor: "white" }}
               >
-                Download APK
+                <Download size={16} /> Download APK
               </a>
+
               <a
                 href="#features"
                 className="inline-flex items-center gap-2 border px-4 py-3 rounded-2xl text-sm hover:bg-white"
