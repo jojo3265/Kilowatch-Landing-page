@@ -62,13 +62,11 @@ export default function LandingPage() {
               FAQ
             </a>
             <a
-              href="#download"
-              className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium shadow-sm hover:opacity-95"
-              style={{
-                borderColor: "rgba(0,0,0,0.08)",
-              }}
+              className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-2xl font-semibold shadow"
+              href="/downloads/KiloWatch.apk"
+              style={{ backgroundColor: "var(--kw-primary)" }}
             >
-              <Download size={14} /> Download APK
+              Download APK
             </a>
           </nav>
 
@@ -101,13 +99,18 @@ export default function LandingPage() {
 
       {/* HERO */}
       <main className="max-w-7xl mx-auto px-6 py-16">
-        <div className=" flex gap-12 items-center">
-          <section className=" flex flex-col items-center lg:col-span-7">
+        {/* HERO - improved alignment + responsive type sizes */}
+        <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+          <section className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             <motion.h1
               initial={{ y: 12, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl sm:text-5xl font-extrabold leading-tight"
+              className="font-extrabold leading-tight text-5xl"
+              // responsive sizes: smaller on tiny screens, large on desktop
+              /* alternative using Tailwind classes:
+         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+      */
             >
               KiloWatch — estimate electricity use, cut costs ⚡
             </motion.h1>
@@ -116,8 +119,12 @@ export default function LandingPage() {
               initial={{ y: 8, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="mt-6 text-lg max-w-xl"
-              style={{ color: "#4B5563" }}
+              className="mt-6 max-w-xl"
+              style={{
+                color: "#4B5563",
+                fontSize: "clamp(0.95rem, 1.6vw, 1.125rem)", // responsive paragraph size
+                lineHeight: 1.5,
+              }}
             >
               Not a real-time monitor — KiloWatch helps households estimate
               energy consumption and monthly cost using appliance profiles and a
@@ -125,33 +132,31 @@ export default function LandingPage() {
               compare scenarios, and discover quick savings.
             </motion.p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 w-full flex flex-col sm:flex-row sm:items-center sm:gap-3 justify-center md:justify-start">
+              {/* primary CTA */}
               <a
+                className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-2xl font-semibold shadow"
                 href="/downloads/KiloWatch.apk"
-                download="KiloWatch.apk"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleDownload("/downloads/KiloWatch.apk", "KiloWatch.apk");
-                }}
-                className="inline-flex items-center gap-2 text-black px-5 py-3 rounded-2xl font-semibold shadow"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "var(--kw-primary)" }}
               >
-                <Download size={16} /> Download APK
+                Download APK
               </a>
 
+              {/* secondary */}
               <a
                 href="#features"
-                className="inline-flex items-center gap-2 border px-4 py-3 rounded-2xl text-sm hover:bg-white"
+                className="mt-3 sm:mt-0 inline-flex items-center gap-2 border px-4 py-3 rounded-2xl text-sm"
                 style={{
                   color: "var(--kw-dark)",
                   borderColor: "rgba(27,80,58,0.12)",
+                  backgroundColor: "transparent",
                 }}
               >
                 Explore Features
               </a>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs">
+            <div className="mt-8 w-full grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm">
               <div className="flex items-start gap-3">
                 <div
                   className="rounded-lg p-2"
