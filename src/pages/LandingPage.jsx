@@ -228,22 +228,12 @@ export default function LandingPage() {
             <Feature
               icon={<FileText size={20} style={{ color: "var(--kw-dark)" }} />}
               title="Detailed Reports"
-              desc="Breakdown by appliance, usage schedule, and monthly cost with simple suggestions to save."
+              desc="Breakdown by appliance, usage schedule, and monthly cost to save."
             />
             <Feature
               icon={<Zap size={20} style={{ color: "var(--kw-dark)" }} />}
               title="Scenario Comparison"
               desc="Compare usage scenarios (more efficient bulbs, shorter run-times) to project savings."
-            />
-            <Feature
-              icon={<Download size={20} style={{ color: "var(--kw-dark)" }} />}
-              title="Offline APK"
-              desc="Downloadable APK for local use — no continuous backend required."
-            />
-            <Feature
-              icon={<Camera size={20} style={{ color: "var(--kw-dark)" }} />}
-              title="CSV Export"
-              desc="Export appliance lists and estimates for sharing or academic use."
             />
           </div>
         </section>
@@ -289,7 +279,8 @@ export default function LandingPage() {
             >
               <div className="font-medium">3. Estimate Monthly Cost</div>
               <div className="mt-2" style={{ color: "#4B5563" }}>
-                kW × hours/day × days/month × tariff = estimated monthly cost.
+                kW × hours/day × days/month × PELCO I Electricity Rate (₱/kWh) =
+                estimated monthly cost.
               </div>
             </div>
           </div>
@@ -305,7 +296,7 @@ export default function LandingPage() {
             />
             <FAQ
               q="Does OCR work offline?"
-              a="OCR is bundled in the APK for on-device parsing, but some advanced parsing/updates may require occasional connectivity."
+              a="No — OCR requires network access. The app needs an internet connection to open and to perform OCR/advanced parsing, so OCR won’t function when the device is offline."
             />
             <FAQ
               q="Can I edit appliance profiles?"
@@ -313,7 +304,7 @@ export default function LandingPage() {
             />
             <FAQ
               q="Is my data stored locally?"
-              a="By default, data is local in the APK. Cloud sync is optional and introduced only if the user enables it."
+              a="No — by default your data is saved to Firestore. The app depends on an internet connection to access your account data."
             />
           </div>
         </section>
