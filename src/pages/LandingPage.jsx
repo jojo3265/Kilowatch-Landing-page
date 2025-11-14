@@ -63,7 +63,7 @@ export default function LandingPage() {
             </a>
             <a
               className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-2xl font-semibold shadow"
-              href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.2/Kilowatch.apk"
+              href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.3/Kilowatch.apk"
               style={{ backgroundColor: "var(--kw-primary)" }}
             >
               Download APK
@@ -136,7 +136,7 @@ export default function LandingPage() {
               {/* primary CTA */}
               <a
                 className="inline-flex items-center gap-2 text-white px-5 py-3 rounded-2xl font-semibold shadow"
-                href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.2/Kilowatch.apk"
+                href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.3/Kilowatch.apk"
                 style={{ backgroundColor: "var(--kw-primary)" }}
               >
                 Download APK
@@ -328,7 +328,7 @@ export default function LandingPage() {
               <div className="mt-6 flex gap-3 flex-wrap">
                 <a
                   className="inline-flex items-center gap-2 text-black px-5 py-3 rounded-2xl font-semibold shadow"
-                  href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.2/Kilowatch.apk"
+                  href="https://github.com/jojo3265/Kilowatch-Landing-page/releases/download/v1.0.3/Kilowatch.apk"
                   style={{ backgroundColor: "white" }}
                 >
                   Download APK
